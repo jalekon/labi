@@ -1,0 +1,60 @@
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+int main()
+
+{
+	int  x, k;
+	cout << "k= " << endl;
+	cin >> k;
+	x = k % 7;
+	if (x == 1)
+	{
+		cout << "ponedel'nik";
+	}
+	else
+	{
+		if (x == 2)
+		{
+			cout << "vtornik";
+		}
+		else
+		{
+			if (x == 3)
+			{
+				cout << "sreda";
+			}
+			else
+			{
+				if (x == 4)
+				{
+					cout << "4etverg";
+				}
+				else
+				{
+					if (x == 5)
+					{
+						cout << "pyatnica";
+					}
+					else
+					{
+						if (x == 6)
+						{
+							cout << "sybbota";
+						}
+						else
+						{
+							if (x == 0)
+							{
+								cout << "voskresenye";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
