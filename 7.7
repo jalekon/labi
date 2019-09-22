@@ -1,0 +1,15 @@
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	int y, a, b, c;
+	bool x;
+	cout << "vvedite a,b,c"<< endl;
+	cin >> a >> b >> c;
+	x = ((a < b + c) & (b < a + c) & (c < a + b));
+	cout << x;
+}
