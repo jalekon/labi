@@ -1,0 +1,23 @@
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+int main()
+
+{
+float x1, y1, x2, y2, x3, y3, p, s, ab, ac, bc;
+cout << "vvedite koordinati pervoi to4ki " << endl;
+cin >> x1 >> y1;
+cout << "vvedite koordinati vtoroi to4ki " << endl;
+cin >> x2 >> y2;
+cout << "vvedite koordinati tret'eu' to4ki " << endl;
+cin >> x3 >> y3;
+ab = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+ac = sqrt(pow((x3 - x1), 2) + pow((y3 - y1), 2));
+bc = sqrt(pow((x3 - x2), 2) + pow((y3 - y2), 2));
+p = ab + ac + bc;
+s = sqrt(p / 2 * (p / 2 - ab) * (p / 2 - ac) * (p/2 - bc));
+cout << "p= " << p << endl << "s= " << s;
+}
