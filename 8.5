@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int x;
+	cout << "vvedite 4islo " << endl;
+	cin >> x ;
+	if (x==0)
+	{
+		cout << "nylevoe'";
+	}
+	else
+	{
+		if ((x > 0) & (x % 2==0))
+		{
+			cout << "polojitel'noe 4etnoe";
+		}
+		else 
+		{
+			if ((x > 0) & (x % 2 != 0))
+			{
+				cout << "polojitel'noe ne 4etnoe";
+			}
+			else
+			{
+				if ((x < 0) & (x % 2 == 0))
+				{
+					cout << "otricatel'noe 4etnoe";
+				}
+				else
+				{
+					cout << "otricatel'noe ne 4etnoe";
+				}
+			}
+		}
+	}
+}
