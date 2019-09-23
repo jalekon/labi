@@ -1,0 +1,18 @@
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+int main()
+
+{
+int x1, y1, x2, y2, p, s;
+cout << "vvedite koordinati pervoi to4ki " << endl;
+cin >> x1 >> y1;
+cout << "vvedite koordinati vtoroi to4ki " << endl;
+cin >> x2 >> y2;
+p = 2 * (abs(x2 - x1) + abs(y2 - y1));
+s = abs(x2 - x1) * abs(y2 - y1);
+cout << "p= " << p << endl << "s=" << s;
+}
