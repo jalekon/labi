@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int x;
+	cout << "vvedite 4islo 1 < x < 999  " << endl;
+	cin >> x ;
+	if ((x / 10 == 0) & (x % 2 == 0))
+	{
+		cout << "odnozna4noe 4etnoe";
+	}
+	else
+	{
+		if ((x / 10 == 0) & (x % 2 != 0))
+		{
+			cout << "odnozna4noe ne 4etnoe";
+		}
+		else
+		{
+			if ((x / 100 == 0) & (x % 2 == 0))
+			{
+				cout << "dvyzna4noe 4etnoe";
+			}
+			else
+			{
+				if ((x / 100 == 0) & (x % 2 != 0))
+				{
+					cout << "dvyzna4noe ne 4etnoe";
+				}
+				else
+				{
+					if (x % 2 == 0)
+					{
+						cout << "trexzna4noe 4etnoe";
+					}
+					else
+					{
+						cout << "trexzna4noe 4etnoe";
+					}
+				}
+
+			}
+		}
+	}
+}
