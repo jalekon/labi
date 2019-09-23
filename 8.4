@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	float x, y, a;
+	cout << "vvedite to4ky" << endl;
+	cin >> x >> y ;
+	if ((x > 0) & (y > 0))
+	{
+		cout << "pervaya 4etvert'";
+	}
+	else
+	{
+		if ((x < 0) & (y > 0))
+		{
+			cout << "vtoraya 4etvert'";
+		}
+		else 
+		{
+			if ((x < 0) & (y < 0))
+			{
+				cout << "tret'a 4etvert'";
+			}
+			else
+			{
+					cout << "4etvertaya 4etvert'";
+			}
+		}
+	}
+}
