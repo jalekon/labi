@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	float x1, y1, x2, y2, x3, y3, b, c;
+	cout << "vvedite to4ki a, b, c" << endl;
+	cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+	b = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+	c = sqrt(pow((x3 - x1), 2) + pow((y3 - y1), 2));
+	if (b < c)
+	{
+		cout << "AB= " << b;
+	}
+	else
+	{
+		if (c < b)
+		{
+			cout << "AC= " << c;
+		}
+		else {
+			cout << "odinakovo ";
+		}
+	}
+}
