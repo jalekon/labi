@@ -1,0 +1,18 @@
+#include <iostream> 
+#include <cmath> 
+using namespace std;
+
+int main()
+{
+	int A, i, B,j;
+	cout << "vvedite 2 4isla" << endl;
+	cin >> A>>B;
+
+	while (A > B || A < 0 || B < 0);
+	for (int i = A; i < B + 1; i++) {
+		for (int j = 0; j < i; j++) {
+			cout << i;
+		}
+		cout << "|";
+	}
+}
