@@ -1,0 +1,94 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n,a,b;
+	cout << "vvedite kol-vo zadaniu' (10-40)"<< endl;
+	cin >> n;
+	if ((10<= n) & (n<20)) {
+		switch (n)
+		{
+		case 10:
+			cout << "desyat' ";
+			break;
+		case 11:
+			cout << "odinadcat' ";
+			break;
+		case 12:
+			cout << "dvenadcat' ";
+			break;
+		case 13:
+			cout << "trinadcat' ";
+			break;
+		case 14:
+			cout << "4etirnadcat' ";
+			break;
+		case 15:
+			cout << "pyatnadcat' ";
+			break;
+		case 16:
+			cout << "westnadcat' ";
+			break;
+		case 17:
+			cout << "semnadcat' ";
+			break;
+		case 18:
+			cout << "vosemnadcat' ";
+			break;
+		case 19:
+			cout << "devyatnadcat' ";
+			break;
+		}
+		cout << "y4ebnix zadaniu'";
+	}
+	else
+	{
+		a = n / 10;
+		b = n % 10;
+		switch (a)
+		{
+		case 2:
+			cout << "dvadcat' ";
+			break;
+		case 3:
+			cout << "tridcat' ";
+			break;
+		case 4:
+			cout << "4orok ";
+			break;
+		}
+		switch (b)
+		{
+		case 0:
+			cout << " y4ebnix zadaniu'";
+			break;
+		case 1:
+			cout << "odno y4ebnoe zadanie";
+			break;
+		case 2:
+			cout << "dva y4ebnix zadaniya";
+			break;
+		case 3:
+			cout << "tri y4ebnix zadaniya";
+			break;
+		case 4:
+			cout << "4etire y4ebnix zadaniya";
+			break;
+		case 5:
+			cout << "pyat' y4ebnix zadaniu'";
+			break;
+		case 6:
+			cout << "west'y4ebnix zadaniu'";
+			break;
+		case 7:
+			cout << "sem' y4ebnix zadaniu'";
+			break;
+		case 8:
+			cout << "vosem' y4ebnix zadaniu'";
+			break;
+		case 9:
+			cout << "devyat' y4ebnix zadaniu'";
+			break;
+		}
+	}
+}
