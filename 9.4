@@ -1,0 +1,136 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n, a, b,c,d;
+	cout << "vvedite 4islo (100-999)" << endl;
+	cin >> n;
+	a = n / 100;
+	b = n % 100;
+	c = (n / 10) % 10;
+	d = n % 10;
+	switch (a)
+	{
+	case 1:
+		cout << "sto ";
+		break;
+	case 2:
+		cout << "dvesti ";
+		break;
+	case 3:
+		cout << "tristo ";
+		break;
+	case 4:
+		cout << "4etiresto ";
+		break;
+	case 5:
+		cout << "pyatsot ";
+		break;
+	case 6:
+		cout << "wesot ";
+		break;
+	case 7:
+		cout << "semisot ";
+		break;
+	case 8:
+		cout << "vosemsot ";
+		break;
+	case 9:
+		cout << "devyatsot ";
+		break;
+	}
+	if ((10 < b) & (b < 20)) {
+		switch (b)
+		{
+		case 11:
+			cout << "odinadcat'";
+			break;
+		case 12:
+			cout << "dvenadcat'";
+			break;
+		case 13:
+			cout << "trinadcat'";
+			break;
+		case 14:
+			cout << "4etirnadcat'";
+			break;
+		case 15:
+			cout << "pyatnadcat'";
+			break;
+		case 16:
+			cout << "westnadcat'";
+			break;
+		case 17:
+			cout << "semnadcat'";
+			break;
+		case 18:
+			cout << "vosemnadcat'";
+			break;
+		case 19:
+			cout << "devaytnadcat'";
+			break;
+		}
+	}
+	else {
+		switch (c)
+		{
+		case 10:
+			cout << "desyat'";
+			break;
+		case 20:
+			cout << "dvadcat' ";
+			break;
+		case 30:
+			cout << "tridcat' ";
+			break;
+		case 40:
+			cout << "4orok ";
+			break;
+		case 50:
+			cout << "pyatdesyat ";
+			break;
+		case 60:
+			cout << "wesdesyat ";
+			break;
+		case 70:
+			cout << "semdesyat ";
+			break;
+		case 80:
+			cout << "vosemdesyat ";
+			break;
+		case 90:
+			cout << "devyanosto ";
+			break;
+		}
+		switch (d)
+		{
+		case 1:
+			cout << "odin";
+			break;
+		case 2:
+			cout << "dva";
+			break;
+		case 3:
+			cout << "rti";
+			break;
+		case 4:
+			cout << "4etire";
+			break;
+		case 5:
+			cout << "pyat'";
+			break;
+		case 6:
+			cout << "west'";
+			break;
+		case 7:
+			cout << "semi";
+			break;
+		case 8:
+			cout << "vosemi";
+			break;
+		case 9:
+			cout << "devyat'";
+			break;
+		}
+	}
+}
