@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n, a, b, c, d;
+	cout << "vvedite god" << endl;
+	cin >> n;
+	cout << endl;
+	if (n > 1983) {
+		n = (n - 1984) % 60 + 1;
+	}
+	else {
+		n = 61 - (1984 - n) % 60;
+	}
+	a = (n - 1) % 12 + 1;
+	c = (n - 1) % 10 + 1;
+	c = ((c - 1) / 2) + 1;
+	switch (c)
+	{
+	case 1:
+		cout << "zeleniu' ";
+		break;
+	case 2:
+		cout << "krasniu' ";
+		break;
+	case 3:
+		cout << "joltiu' ";
+		break;
+	case 4:
+		cout << "beliu' ";
+		break;
+	case 5:
+		cout << "cherniu' ";
+		break;
+	}
+	switch (a)
+	{
+	case 1:
+		cout << "krisa";
+		break;
+	case 2:
+		cout << "korova";
+		break;
+	case 3:
+		cout << "tigr";
+		break;
+	case 4:
+		cout << "zayac";
+		break;
+	case 5:
+		cout << "drakon";
+	case 6:
+		cout << "zmeya";
+	case 7:
+		cout << "lowad'";
+		break;
+	case 8:
+		cout << "ovca";
+		break;
+	case 9:
+		cout << "obez'yana";
+		break;
+	case 10:
+		cout << "kyrica";
+		break;
+	case 11:
+		cout << "sobaka";
+		break;
+	case 12:
+		cout << "cvin'ya";
+		break;
+	}
+}
