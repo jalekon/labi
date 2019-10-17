@@ -1,0 +1,20 @@
+using namespace std;
+#define _USE_MATH_DEFINES
+#include <iostream>
+
+double RingS(double S1, double S2) {
+	double S;
+	S = M_PI * S1 * S1 - M_PI * S2 * S2;
+	return S;
+}
+	int main()
+	{
+		setlocale(LC_ALL, "Russian");
+		int i;
+		double R1, R2;
+		for (i = 1; i <= 3; i++) {
+			cout << "Введите 2 радиуса " << endl;
+			cin >> R1 >> R2;
+			cout << "Площадь кльца равна: " << RingS(R1, R2) << endl;
+		}
+	}
