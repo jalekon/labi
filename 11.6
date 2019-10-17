@@ -1,0 +1,20 @@
+#include <iostream> 
+#include <cmath> 
+using namespace std;
+
+int main()
+{
+	int n, f, k,a,z;
+	cout << "vvedite 2 4isla " << endl;
+	cin >> n;
+	k = 3;
+	f = 1;
+	a = 1;
+	while (f<n) {
+		z = f;
+		f = f + a;
+		a= z;
+		k++;
+	}
+	cout << "№ F=" << k;
+}
