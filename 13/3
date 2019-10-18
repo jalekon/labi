@@ -1,0 +1,22 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+
+	int main()
+	{
+		setlocale(LC_ALL, "Russian");
+		int n, i, b,a,y;
+		cout << "Введите N, A и B" << endl;
+		cin >>n>> a>> b;
+		int* x = new int[n];
+		x[0] = a;
+		x[1] = b;
+		y = a + b;
+
+		for (i = 2; i < n; i++) {
+			x[i] = y;
+			y = x[i] + x[i - 1];
+		}
+		for (i = 0; i < n; i++)
+			cout << i << "-й элемент массива= " << x[i]<<endl;
+}
