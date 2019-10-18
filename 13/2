@@ -1,0 +1,16 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+
+	int main()
+	{
+		setlocale(LC_ALL, "Russian");
+		int n, i, d,a;
+		cout << "Введите N, A и D" << endl;
+		cin >>n>> a>> d;
+		int* x = new int[n];
+			for (i = 0; i < n; i++) {
+			x[i] = a * pow(d, i);
+			cout << i << "-й элемент массива= " << x[i]<<endl;
+		}
+}
