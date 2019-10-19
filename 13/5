@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int n, i, a, y;
+	int n, i;
 	cout << "Введите N " << endl;
 	cin >> n;
 	int* x = new int[n];
