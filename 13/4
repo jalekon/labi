@@ -1,0 +1,25 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, a, y;
+	cout << "Введите N " << endl;
+	cin >> n;
+	int* x = new int[n];
+	y = n-1;
+	for (i = 0; i < n; i++) {
+		x[i] = rand() % 10;
+		cout << i << "-й элемент массива= " << x[i] << endl;
+	}
+	cout << endl;
+	for (i = 0; i < (n / 2); i++) {
+		cout << i << "-й элемент массива= " << x[i] << endl;
+		cout << y << "-й элемент массива= " << x[y] << endl;
+		y = y - 1;
+	}
+	if ((n % 2) != 0)
+		cout << ((n / 2)) << "-й элемент массива= " << x[(n / 2)] << endl;
+}
