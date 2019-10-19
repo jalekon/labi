@@ -6,7 +6,6 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int n, i, k;
-	double s;
 	cout << "Введите N и массив c 2-мя повторяющимися элементами" << endl;
 	cin >> n;
 	int* x = new int[n];
