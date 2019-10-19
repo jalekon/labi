@@ -1,0 +1,22 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, min;
+	double s;
+	cout << "Введите N и не повторяющаеся элементы массива" << endl;
+	cin >> n;
+	int* x = new int[n];
+	for (i = 1; i <= n; i++) {
+		cout << i << "-й элемент массива= " << endl;
+		cin >> x[i];
+	}
+	min = x[2];
+	for (i = 2; i <= n; i += 2)
+		if (min > x[i])
+			min = x[i];
+	cout << min << " минимальное значение";
+}
