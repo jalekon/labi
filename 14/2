@@ -1,0 +1,25 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, d;
+	double s;
+	cout << "Введите N и не повторяющаеся элементы массива" << endl;
+	cin >> n;
+	int* x = new int[n];
+	
+	for (i = 1; i <= n; i++) {
+		cout << i << "-й элемент массива= " << endl;
+		cin >> x[i];
+	}
+	d = x[n] - x[n-1];
+	while ((x[n] - x[n - 1]) == d)
+		n--;
+	if (n ==1 )
+		cout << "Разность арифметической прогрессии равна: " << d << endl;
+	else
+		cout << "0";
+}
