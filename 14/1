@@ -1,0 +1,27 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, k, l, y;
+	double s;
+	cout << "Введите N, K и L" << endl;
+	cin >> n>> k >> l;
+	int* x = new int[n];
+
+	for (i = 1; i <= n; i++) {
+		x[i] = rand() % 10;
+		cout << i << "-й элемент массива= " << x[i] << endl;
+	}
+	cout << endl;
+	s = 0;
+	for (i = k; i <= l; i++) {
+		y = x[i];
+		s = s + y;
+	}
+	cout << "сумма числел от K до L=" << s << endl;
+	s= s / ((l - k) + 1);
+		cout << "среднее арифметическое =" << s << endl;
+}
