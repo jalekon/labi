@@ -1,0 +1,28 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, k;
+	double s;
+	cout << "Введите N и массив c 2-мя повторяющимися элементами" << endl;
+	cin >> n;
+	int* x = new int[n];
+	for (i = 1; i <= n; i++) {
+		cout << i << "-й элемент массива= " << endl;
+		cin >> x[i];
+	}
+	for (i = 1; i <= n - 1; i++) {
+		for (k = 2; k <= n; k++) {
+			if (x[i] == x[k]) {
+				if (k < i)
+					cout << "два одинаковых значения под номерами " << k << " и " << i;
+				else 
+					if (i<k)
+					cout << "два одинаковых значения под номерами " << i << " и " << k;
+			}
+		}
+	}
+}
