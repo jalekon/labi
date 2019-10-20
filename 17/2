@@ -10,7 +10,6 @@ int main()
 	cin >> n>> l;
 	int* a = new int[n];
 	int* b = new int[n];
-	int* c = new int[n];
 	for (i = 1; i <= n; i++) {
 		cout << i << "-й элемент массива= " << endl;
 		cin >> a[i];
