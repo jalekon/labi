@@ -1,0 +1,32 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, k, x, y, z;
+	cout << "Введите N и массив" << endl;
+	cin >> n;
+	int* a = new int[n];
+	int* b = new int[n];
+	for (i = 1; i <= n; i++) {
+		cout << i << "-й элемент массива= " << endl;
+		cin >> a[i];
+	}
+	y = 0;
+	for (i = 1; i <= n; i++) {
+		for (x = i + 1; x <= n; x++) {
+			if (a[i] == a[x]) {
+				z = a[x];
+				for (k = x; k <= (n-1); k++) {
+					a[k] = a[k + 1];
+				}
+				y++;
+				a[n] = z;
+			}
+		}
+	}
+		for (i = 1; i <= (n - y/2); i++)
+			cout << a[i] << "|";
+}
