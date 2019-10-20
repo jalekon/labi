@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int n, i, k,y,l;
+	int n, i, k,y,l,z;
 	cout << "Введите N, L и массив" << endl;
 	cin >> n>> l;
 	int* a = new int[n];
@@ -24,12 +24,15 @@ int main()
 			if (k > l) {
 				b[y] = 0;
 				k = 1;
+				y++;
 			}
 			else {
-				b[y] = a[i];
+				for (z = 0; z < k; z++) {
+					b[y] = a[i];
+					y++;
+				}
 				k = 1;
 			}
-			y++;
 		}
 	}
 	for (i = 1; i <= (y-1); i++)
