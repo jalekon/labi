@@ -1,16 +1,57 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
 
-				for (i = 1; i <= n; i++) {
-					if (a[i] > max) {
-						max = a[i];
-						x = i;
-					}
-				}
-n = n + 1;
-				k = n;
-				while (k > (x + 1)) {
-					a[k] = a[k - 1];
-					k--;
-				}
-				a[x + 1] = 0;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, k, x, y, min, max;
+	cout << "Введите N и массив" << endl;
+	cin >> n;
+	int* a = new int[n];
+	for (i = 1; i <= n; i++) {
+		cout << i << "-й элемент массива= " << endl;
+		cin >> a[i];
+	}
+	max = a[1];
+	min = a[1];
+	x = 1;
+	y = 1;
+	for (i = 1; i <= n; i++) {
+		if (a[i] > max) {
+			max = a[i];
+			x = i;
+		}
+		if (a[i] < min) {
+			min = a[i];
+			y = i;
+		}
+	}
+	n = n + 1;
+	i = n;
+	while (i > (x+1)) {
+		a[i] = a[i - 1];
+		i--;
+	}
+	a[x+1] = 0;
+	n = n + 1;
+	i = n;
+	if (a[y] == min) {
+		while (i > (y)) {
+			a[i] = a[i - 1];
+			i--;
+		}
+		a[y] = 0;
+	}
+	else {
+		while (i > (y + 1)) {
+			a[i] = a[i - 1];
+			i--;
+		}
+		a[y + 1] = 0;
+	}
+	cout << x << endl;
 
-				cout << x << endl;
+	for (i = 1; i <= (n); i++)
+		cout << a[i] << "|";
+}
