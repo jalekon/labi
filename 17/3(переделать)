@@ -1,0 +1,61 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, k,y,l,z,x,q,c,w;
+	cout << "Введите N, K и массив" << endl;
+	cin >> n>> k;
+	int* a = new int[n];
+	int* b = new int[n];
+	for (i = 1; i <= n; i++) {
+		cout << i << "-й элемент массива= " << endl;
+		cin >> a[i];
+	}
+	x = 1;
+	for (z = n; z > 0; z--) {
+		if (a[z] == a[z - 1])
+			x++;
+		else {
+			q = a[z];
+			z = 0;
+		}
+	}
+
+	cout << q << x << endl;
+
+	l = 1;
+	c = 0;
+	for (i = 1; i <= n; i++) {
+		if (a[i] == a[i + 1])
+			l++;
+		else
+			c++;
+		if (c == k)
+		{
+			w = a[i];
+			for (y = 1; y <= n; y++)
+			{
+				if (y < (i - l + 1))
+					b[y] = a[y];
+				else
+					if (y <= (i - l + 1 + z))
+						b[y] = q;
+					else
+					{
+						for (i; i <= n; i++)
+						b[y] = a[i + 1];
+					}
+			}
+		}
+		else
+			l = 1;
+	}
+	for (z = n; z >= (n - l); z--)
+		b[z] = w;
+
+	for (i = 1; i <= n; i++)
+		cout << b[i] << "|";
+}
