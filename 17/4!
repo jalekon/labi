@@ -8,12 +8,13 @@ int main()
 	double x,y,max;
 	int i,z,k,n;
 	cout << "Введите N и точки x, y лежащие во 2 четверти" << endl;
-	cin >>n >> x>> y;
+	cin >>n ;
 	int* a = new int[n];
 	int* b = new int[n];
 	z = 1;
 	for (i = 1; i <= n; i++) {
-		cout << x << y << endl;
+		cin >> x >> y;
+		cout << endl;
 		if ((x < 0) & (y > 0)){
 			a[i] = (pow(x, 2) + pow(y, 2));
 		b[z] = x;
