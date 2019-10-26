@@ -19,12 +19,12 @@ int main()
 	for (i = 1; i <= n; i++) {
 		for (j = 1; j <= m; j++)
 			cout << a[i][j];
-			cout << endl;
+		cout << endl;
 	}
 	cout << endl;
-	
+
 	for (j = 1; j <= (m / 2); j++)
-	
+
 	{
 		for (i = 1; i <= (n / 2); i++)
 		{
@@ -38,7 +38,7 @@ int main()
 
 	for (i = 1; i <= n; i++) {
 		for (j = 1; j <= m; j++)
-			cout << a[i][j];
+			cout << a[i][j]<<"|";
 		cout << endl;
 	}
 }
