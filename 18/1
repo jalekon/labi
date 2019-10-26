@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int m, i, j, k, p, z;
+	cout << "Введите порядок матрицы M и заполните её: ";
+	cin >> m;
+	int** a = new int* [m];
+	for (i = 0; i < m; i++)
+		a[i] = new int[m];
+	for (i = 0; i < m; i++)
+		for (j = 0; j < m; j++)
+			cin >> a[i][j];
+	for (k = 0; k < (m / 2 + 1); k++)
+	{
+		for (i = k; i < m - k; i++)
+		{
+			cout << a[i][k] << " ";
+		}
+		i--;
+		for (j = k + 1; j < m - k; j++)
+		{
+			cout << a[i][j] << " ";
+		}
+		j--;
+		for (i = m - k - 2; i >= k; i--)
+		{
+			cout << a[i][j] << " ";
+		}
+		i++;
+		for (j = m - k - 2; j > k; j--)
+		{
+			cout << a[i][j] << " ";
+		}
+		j++;
+	}
+}
