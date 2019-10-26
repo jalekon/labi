@@ -20,9 +20,8 @@ int main()
 		for (j = 1; j <= m; j++)
 			cout << a[i][j];
 			cout << endl;
-
 	}
-
+	cout << endl;
 	for (i = 1; i <= n; i++) {
 		max = a[i][1];
 		x = 1;
