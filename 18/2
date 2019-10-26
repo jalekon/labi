@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int m, i, j, n, k, p, s;
+	cout << "Введите порядок матрицы M*N: "<< endl;
+	cin >> m >> n;
+	cout << "Заполните матрицу: " << endl;
+	int** a = new int* [n];
+	for (i = 1; i <= n; i++)
+		a[i] = new int[m];
+	for (i = 1; i <= n; i++)
+		for (j = 1; j <= m; j++)
+			cin >> a[i][j];
+	cout << "Введите K ";
+	cin >> k;
+	p = 1;
+	s = 0;
+	for (i = 1; i <= m; i++) {
+		p *= a[k][i];;
+		s += a[k][i];;
+	}
+	cout << "Сумма=" << s << " и произведение= " << p << " в строке " << k;
+}
