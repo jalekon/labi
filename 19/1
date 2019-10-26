@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int m, i, j, n, max, x, min, y;
+	double s;
+	cout << "Введите порядок матрицы M*N: " << endl;
+	cin >> m >> n;
+	cout << "Заполните матрицу: " << endl;
+	int** a = new int* [n];
+	for (i = 1; i <= n; i++)
+		a[i] = new int[m];
+	for (i = 1; i <= n; i++)
+		for (j = 1; j <= m; j++)
+			cin >> a[i][j];
+
+	for (i = 1; i <= n; i++) {
+		for (j = 1; j <= m; j++)
+			cout << a[i][j];
+			cout << endl;
+
+	}
+
+	for (i = 1; i <= n; i++) {
+		max = a[i][1];
+		x = 1;
+		min = a[i][1];
+		y = 1;
+		for (j = 1; j <= m; j++) {
+			if (a[i][j] > max) {
+				max = a[i][j];
+				x = j;
+			}
+			if (a[i][j] < min) {
+				min = a[i][j];
+				y = j;
+			}
+		}
+		for (j = 1; j <= m; j++) {
+			a[i][x] = min;
+			a[i][y] = max;
+		}
+	}
+	for (i = 1; i <= n; i++) {
+		for (j = 1; j <= m; j++)
+			cout << a[i][j];
+		cout << endl;
+
+	}
+}
