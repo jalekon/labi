@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int m, i, j, n, p, min, x;
+	cout << "Введите порядок матрицы M*N: "<< endl;
+	cin >> m >> n;
+	cout << "Заполните матрицу: " << endl;
+	int** a = new int* [n];
+	for (i = 1; i <= n; i++)
+		a[i] = new int[m];
+	for (i = 1; i <= n; i++)
+		for (j = 1; j <= m; j++)
+			cin >> a[i][j];
+	p = 1;
+	x = 1;
+	min = 1;
+	for (j = 1; j <= m; j++) {
+		min *= a[1][j];
+	}
+	
+	for (i = 1; i <= n; i++){
+		for (j = 1; j <= m; j++)
+			p *= a[i][j];
+		if (min > p) {
+			min = p;
+			x = i;
+		}
+		else
+			p = 1;
+		}
+	cout << "Наибольшее произвидение "<< min <<" имеет столбца "<<x;
+}
