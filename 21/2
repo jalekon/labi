@@ -1,0 +1,32 @@
+using namespace std;
+
+#include <string>
+#include <iostream>
+#include <windows.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int k, m, i, min;
+	string s;
+	k = 0;
+	cout << "Введите строку: ";
+	getline(cin, s);
+	m = s.size();
+	min = 100000000;
+
+
+	for (i = 0; i < m; i++) {
+		if (s[i] != ' ') 
+			k++;
+		else {
+			if (min > k) {
+				min = k;
+				k = 0;
+			}
+		}
+		if (min > k)
+			min = k;
+	}
+	cout << "Длинна самого короткого слова: " << min;
+}
