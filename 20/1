@@ -1,0 +1,16 @@
+using namespace std;
+
+#include <iostream>
+#include <windows.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	char с;
+	cout << "Введите символ ";
+	cin >> с;
+	cout << "Предшедствующий символ = " << char(с - 1)<< endl;
+	cout << "Следующий символ =" << char(с + 1);
+}
