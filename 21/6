@@ -1,0 +1,30 @@
+using namespace std;
+
+#include <string>
+#include <iostream>
+#include <windows.h>
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int i, m, k;
+	string s;
+	cout << "Введите строку S: ";
+	cin.ignore();
+	getline(cin, s);
+	k = 0;
+	m = s.size();
+
+	for (i = 0; i < m; i++) 
+		if (s[i] == 92) 
+			k++;
+
+	if (k == 1) 
+		cout << char(92);
+	else {
+		cout << "Имя последнего каталога: ";
+		for (i = s.find_last_of(92, s.find_last_of(92) - 1) + 1; i < s.find_last_of(92); i++)
+			cout << s[i];
+	}
+}
