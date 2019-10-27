@@ -1,0 +1,30 @@
+using namespace std;
+
+#include <string>
+#include <iostream>
+#include <windows.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int k, m, i;
+	char c;
+	string s;
+	k = 0;
+	cout << "Введите строку: ";
+	getline(cin, s);
+	m = s.size();
+
+	c = s[0];
+	for (i = 1; i < s.length(); i++)
+	{
+		if (s[i - 1] == ' ' && s[i] != ' ') c = s[i];
+		if (s[i] != ' ' && s[i] == c && s[i - 1] != ' ')
+		{
+			s[i] = '.';
+		}
+	}
+	cout << "Преобразованная строка: " << s << endl;
+}
