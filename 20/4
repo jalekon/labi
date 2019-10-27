@@ -1,0 +1,25 @@
+using namespace std;
+
+#include <string>
+#include <iostream>
+#include <windows.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int l, i;
+	char c;
+	string S;
+	cout << "Введите строку: ";
+	getline(cin, S); //ввод нескольких слов
+	l = S.size(); //размер строки
+	cout << "Введите символ C: ";
+	cin >> c;
+	cout << "Измененная строка: ";
+	for (i =(l - 1); i >= 0; i--)
+		if (S[i] == c)
+			S.insert(i, 1, c);
+	cout << "Измененная строка: " << S;
+}
