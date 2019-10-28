@@ -12,12 +12,12 @@ int main()
 	int l, i;
 	string S;
 	cout << "Введите строку: ";
-	getline(cin, S); //ввод нескольких слов
-	l = S.size(); //размер строки
+	getline(cin, S);
+	l = S.size(); 
 	cout << "Измененная строка: ";
 	for (i = 0; i < l; i++) {
 		if (S[i] == ' ')
-			S.erase(i, 1); //удаление элемента строки
+			S.erase(i, 1);
 		cout << S[i] << " ";
 	}
 }
