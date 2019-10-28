@@ -13,8 +13,8 @@ int main()
 	char c;
 	string S;
 	cout << "Введите строку: ";
-	getline(cin, S); //ввод нескольких слов
-	l = S.size(); //размер строки
+	getline(cin, S);
+	l = S.size(); 
 	cout << "Введите символ C: ";
 	cin >> c;
 	cout << "Измененная строка: ";
