@@ -1,1 +1,26 @@
-
+	SetConsoleOutputCP(1251);
+	int i, m;
+	string s, Filename;
+	fstream f;
+	cout << "Введите имя файла: ";
+	getline(cin, Filename);
+	f.open(Filename);
+	if (f) {
+		while (!f.eof()) {
+			getline(f, s, '\0');
+			m = s.size();
+			for (i = s.find(' ') + 1; i < m; i++) {
+				f << s[i];
+			}
+		}
+		f.close();
+		f.open(Filename, ios::out);
+		for (i = s.find(' ') + 1; i < m; i++) {
+			f << s[i];
+		}
+		f.close();
+	}
+	else {
+		cout << "Файл не существует";
+	}
+}
