@@ -1,0 +1,30 @@
+using namespace std;
+
+#include <string>
+#include <iostream>
+#include <windows.h>
+#include <fstream>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int i;
+	string s, Filename;
+	fstream f;
+	cout << "Введите имя файла: "<< endl;
+	getline(cin, Filename);
+	f.open(Filename);
+	getline(f, s, '\0');
+	f.close();
+	for (i = 1; i < s.size(); i++) {
+		if ((s[i - 1] == ' ') && (s[i] == ' ')) {
+			s.erase(i, 1);
+			i--;
+		}
+	}
+	f.open(Filename, ios::out);
+	f << s;
+	f.close();
+}
