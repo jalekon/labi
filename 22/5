@@ -1,0 +1,28 @@
+using namespace std;
+
+#include <string>
+#include <iostream>
+#include <windows.h>
+#include <fstream>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int i, k;
+	string s, Filename;
+	fstream f;
+	cout << "Введите имя файла: "<< endl;
+	getline(cin, Filename);
+	f.open(Filename);
+	getline(f, s, '\0');
+	f.close();
+	k = 0;
+	for (i = 4; i < s.size(); i++) {
+		if ((s[i - 4] == ' ') && (s[i - 3] == ' ') && (s[i - 2] == ' ') && (s[i - 1] == ' ') && (s[i] == ' ')) {
+			k++;
+		}
+	}
+	cout << "Количество абзацев= " << k;
+}
