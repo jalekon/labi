@@ -13,9 +13,9 @@ int main()
 
 	string s,s0;
 	cout << "Введите строку: ";
-	getline(cin, s); //ввод нескольких слов
+	getline(cin, s);
 	cout << "Введите строку: ";
-	getline(cin, s0); //ввод нескольких слов
+	getline(cin, s0);
 	k = 0;
 	while ((s.find(s0) >= 0) & (s.find(s0) < (s.size() + 1))) {
 		s.erase(s.find(s0), s0.length());
