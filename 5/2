@@ -7,11 +7,10 @@ using namespace std;
 int main()
 
 {
-	double a,b,x;
+	double a, b;
 	int k;
 	cout << "vvedite a, d " << endl;
-		cin >> a>> b;
-		x=a-b;
-		k = x / b;
-	cout<<k;
+	cin >> a >> b;
+	k = a / b;
+	cout << k;
 }
