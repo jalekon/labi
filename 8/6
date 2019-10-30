@@ -37,7 +37,7 @@ int main()
 					}
 					else
 					{
-						cout << "trexzna4noe 4etnoe";
+						cout << "trexzna4noe ne 4etnoe";
 					}
 				}
 
