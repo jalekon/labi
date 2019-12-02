@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	int n, f, k,a,z;
-	cout << "vvedite 2 4isla " << endl;
+	cout << "vvedite 4islo " << endl;
 	cin >> n;
 	k = 3;
 	f = 1;
