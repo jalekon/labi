@@ -3,35 +3,37 @@
 using namespace std;
 int main()
 {
-int n,m,z,p,c,d,i,j,k,sum;
-cout<<"Введите размер массива \n";
-cin>>n;
-m=0;
-z=0;
-sum=0;
-int* a = new int[n];
-int* b = new int[n];
-cout << "Заполните массив точками(x y): ";
-i = 0;
-for (i = 0; i < n; i++)
-{
-	cin >> a[i] >> b[i];
-}
-for (i = 0; i < n - 2; i++)
-for (j = i + 1; j < n - 1; j++)
-for (k = j + 1; k < n; k++)
+	setlocale(LC_ALL, "Russian");
+	int n, m, z, p, c, d, i, j, k, sum;
+	cout << "Введите размер массива \n";
+	cin >> n;
+	m = 0;
+	z = 0;
+	sum = 0;
+	int* a = new int[n];
+	int* b = new int[n];
+	
+	cout << "Заполните массив точками(x y): ";
+	i = 0;
+	for (i = 0; i < n; i++)
 	{
-	if ((sqrt(pow((a[i] - a[j]), 2) + pow((b[i] - b[j]), 2))
-	+ sqrt(pow((a[j] - a[k]), 2) + pow((b[j] - b[k]), 2))
-	+ sqrt(pow((a[k] - a[i]), 2) + pow((b[k] - b[i]), 2))) > sum)
-		{
-		sum = sqrt(pow((a[i] - a[j]), 2) + pow((b[i] - b[j]), 2))
-		+ sqrt(pow((a[j] - a[k]), 2) + pow((b[j] - b[k]), 2))
-		+ sqrt(pow((a[k] - a[i]), 2) + pow((b[k] - b[i]), 2));
-		p = i;
-		c = j;
-		d = k;
-		}
+		cin >> a[i] >> b[i];
 	}
-cout << "Треугольник с вершинами (" << a[p] << ", " << b[p] << "), (" << a[c] << ", " << b[c] << "), (" << a[d] << ", " << b[d] << ") имеет наибольший периметр, равный " << sum << "." << endl;
+	for (i = 0; i < n - 2; i++)
+		for (j = i + 1; j < n - 1; j++)
+			for (k = j + 1; k < n; k++)
+			{
+				if ((sqrt(pow((a[i] - a[j]), 2) + pow((b[i] - b[j]), 2))
+					+ sqrt(pow((a[j] - a[k]), 2) + pow((b[j] - b[k]), 2))
+					+ sqrt(pow((a[k] - a[i]), 2) + pow((b[k] - b[i]), 2))) > sum)
+				{
+					sum = sqrt(pow((a[i] - a[j]), 2) + pow((b[i] - b[j]), 2))
+						+ sqrt(pow((a[j] - a[k]), 2) + pow((b[j] - b[k]), 2))
+						+ sqrt(pow((a[k] - a[i]), 2) + pow((b[k] - b[i]), 2));
+					p = i;
+					c = j;
+					d = k;
+				}
+			}
+	cout << "Треугольник с вершинами (" << a[p] << ", " << b[p] << "), (" << a[c] << ", " << b[c] << "), (" << a[d] << ", " << b[d] << ") имеет наибольший периметр, равный " << sum << "." << endl;
 }
