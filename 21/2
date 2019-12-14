@@ -14,19 +14,17 @@ int main()
 	getline(cin, s);
 	m = s.size();
 	min = 100000000;
-
-
+	
 	for (i = 0; i < m; i++) {
-		if (s[i] != ' ') 
+		if (s[i] != ' ') {
 			k++;
-		else {
-			if (min > k) {
+		};
+		if ((s[i] == ' ') || (i == m - 1)) {
+			if ((k != 0) & (k < min)) {
 				min = k;
-				k = 0;
-			}
-		}
-		if (min > k)
-			min = k;
-	}
-	cout << "Длинна самого короткого слова: " << min;
+			};
+			k = 0;
+		};
+	};
+	cout << "Длина самого короткого слова: " << min;
 }
